@@ -1,0 +1,48 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: root
+  Date: 7/18/15
+  Time: 4:43 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page pageEncoding="UTF-8"%>
+
+<c:url value="/j_spring_security_check" var="check"/>
+<c:url value="/j_spring_security_logout" var="logout"/>
+<sec:authorize access="isAuthenticated()" var="secured"/>
+<sec:authentication property="authorities" var="roles" scope="page"/>
+
+<%--<c:forEach var="role" items="${roles}">--%>
+  <%--${role}<br>--%>
+<%--</c:forEach>--%>
+<c:choose>
+  <c:when test="${!secured}">
+
+    <div class="login">
+      <form action="${check}" method="post">
+        <h3>Login:</h3>
+        <input type="text" name="j_username" value="login" size="15"/>
+        <h3>Password:</h3>
+        <input type="password" name="j_password" value="pass" size="15"/>
+        <input type="submit" value="Login"/>
+      </form>
+    </div> <%--end login--%>
+
+  </c:when>
+  <c:otherwise>
+
+    <div class="logout">
+      <form action="${logout}" method="post">
+        <div>
+          <lable>Access level: ${role} </lable>
+          <lable>User name: ${name}</lable>
+          <input type="submit" value="Logout">
+        </div>
+      </form>
+    </div>
+
+  </c:otherwise>
+</c:choose>

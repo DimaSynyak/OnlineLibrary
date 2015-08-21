@@ -1,0 +1,13 @@
+
+<%@ page pageEncoding="UTF-8" %>
+
+<div class="letters">
+    <c:forEach var="letter" items="${letters}">
+        <div class="letter">
+            <form action="${pageContext.request.contextPath}/books/bookletter=${letter}" method="get">
+                <input type="submit" value="${letter}"/>
+            </form>
+        </div>
+    </c:forEach>
+</div> <%--end leters--%>
+

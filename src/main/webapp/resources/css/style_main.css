@@ -1,0 +1,310 @@
+
+
+
+
+
+.container {
+    margin: auto;
+    width: 1600px;
+    min-height: 900px;
+    max-height: 1350px;
+
+}
+
+.logotip {
+    background: white;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: coral;
+    float: left;
+}
+.logotip2 {
+    width: 75px;
+    margin-right: 40px;
+    float: left;
+}
+
+div .logotip h2 {
+    float: left;
+}
+
+.search {
+
+    background-color: #b8e0ff;
+    border: 2px solid #6a21ff;
+    -moz-border-radius: 33px;
+    -webkit-border-radius: 33px;
+    border-radius: 33px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+    -moz-box-shadow: 0px 0px 14px #000000;
+    -webkit-box-shadow: 0px 0px 14px #000000;
+    box-shadow: 0px 0px 14px #000000;
+    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+
+
+    width: 100%;
+    height: 80px;
+    margin-bottom: 25px;
+    float: left;
+}
+
+.list_author, .login, .letters, .logout {
+    background-color: #b8e0ff;
+    border: 2px solid #6a21ff;
+    -moz-border-radius: 33px;
+    -webkit-border-radius: 33px;
+    border-radius: 33px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+    -moz-box-shadow: 0px 0px 14px #000000;
+    -webkit-box-shadow: 0px 0px 14px #000000;
+    box-shadow: 0px 0px 14px #000000;
+    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+}
+
+.list_author {
+    width: 20%;
+    min-height: 600px;
+    height: calc;
+
+    float: left;
+}
+
+.login, .logout {
+    width: 20%;
+    height: 230px;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.login h3, .login input, .logout input {
+    margin: 5px;
+}
+
+.body {
+
+    background-color: #b8e0ff;
+    border: 2px solid #6a21ff;
+    -moz-border-radius: 33px;
+    -webkit-border-radius: 33px;
+    border-radius: 33px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+    -moz-box-shadow: 0px 0px 14px #000000;
+    -webkit-box-shadow: 0px 0px 14px #000000;
+    box-shadow: 0px 0px 14px #000000;
+    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+
+    width: 78%;
+    min-height: 950px;
+    max-height: 100%;
+    float: right;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 25;
+}
+
+input[type="text"], input[type=password]{
+    font-size: 19px;
+    font-family: Veranda;
+    border-radius: 6px;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+.body h3, .list_author h4 {
+    margin-left: 30%;
+    margin-top: 10px;
+}
+
+.list_author li {
+    margin-top: 10px;
+    margin-left: 8%;
+}
+
+
+.button,.search_button, select, .login input[type=submit], .logout input[type=submit] {
+    background-color: dodgerblue;
+    margin-top: -15px;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    margin-top: 2px;
+}
+.button:hover,.search_button:hover, select:hover, .login input[type=submit]:hover, .logout input[type=submit]:hover {
+    background-color: gray;
+}
+.search_button:active, .login input[type=submit]:active, .logout input[type=submit]:active {
+    text-shadow: #1e4158 0 1px 0;
+    border: 2px solid #0a3c59;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#3e779d));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+    color: #031210;
+}
+
+.book_info {
+    margin: 40px;
+}
+
+.login h3, .login input, .logout input {
+    margin-top: 10px;
+    margin-bottom: -5px;
+    margin-left: 40px;
+}
+
+.login h3 {
+    margin-left: 40px;
+}
+
+.login input[type=submit] {
+    margin-top: 20px;
+    margin-right: 50px;
+    float: right;
+}
+
+.letters{
+    padding-top: 1%;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+    float: left;
+}
+
+.book_info input[type="submit"]:hover,
+.list_author input[type="submit"]:hover,
+.letters input[type="submit"]:hover {
+    background-color: gray;
+}
+
+.let {
+    width: 48px;
+    float: left;
+}
+
+.letter {
+    margin-left: 42px;
+    width: 10px;
+    height: 10px;
+
+    background-size: 5px;
+    float: left;
+}
+
+.book_info input[type="submit"],
+.list_author input[type="submit"],
+.letter input[type="submit"] {
+    background-color: dodgerblue;
+    margin-top: -15px;
+    border-radius: 10px;
+
+}
+
+.logout input[type=submit] {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.logout lable {
+    float: left;
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.list_author input[type="submit"] {
+    width: 150px;
+}
+
+select {
+    border-radius: 20px;
+    width: 130px;
+    -moz-appearance: none;
+    padding: 8px 22px;
+    background-repeat: no-repeat;
+}
+
+input[type="submit"] {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.button, .book_info input[type="submit"] {
+    margin: 5px;
+    width: 90px;
+    float: left;
+}
+
+.book_info {
+    float: left;
+    width: 250px;
+    margin: 40px;
+}
+
+.book_title {
+    float: left;
+}
+
+.select_books select {
+    width: 110px;
+}
+
+.select_books a {
+    margin-left: 12px;
+}
+
+.fields{
+
+}
+
+.image {
+    border: 4px solid black;
+    float: right;
+    margin: 50px;
+}
+
+.labels {
+    float: left;
+    margin-left: 40px;
+    margin-top: 50px;
+    width: 500px;
+}
+
+.label_block label {
+    float: left;
+    margin-top: 30px;
+}
+
+
+.label_block input[type="text"] {
+    float: right;
+}
+
+.label_block{
+    width: 500px;
+    height: 80px;
+}
+
+.button[type="file"]{
+    float: right;
+    display:none;
+}
+  

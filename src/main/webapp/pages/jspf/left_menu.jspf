@@ -1,0 +1,29 @@
+<%@ page pageEncoding="UTF-8"%>
+
+
+<div class="list_author">
+  <h4>Жанры</h4>
+  <ul class="nav">
+
+    <form action="${pageContext.request.contextPath}/main" method="get">
+    <li><input type="submit" value="Все книги"/></li>
+    </form>
+    <c:forEach var="genre" items="${genres}">
+      <c:choose>
+        <c:when test="true">
+          <form action="${pageContext.request.contextPath}/books/genreId=${genre.getId()}">
+            <li><input type="submit" value="${genre.getName()}"/></li>
+          </form>
+        </c:when>
+        <c:otherwise>
+
+          <%--<li><a href="books.jsp?genre_id=<%=genre.getId()%>"><%=genre.getName()%></a></li>--%>
+        </c:otherwise>
+      </c:choose>
+    </c:forEach>
+  </ul>
+
+  <p>&nbsp</p>
+
+
+</div> <%--end list_author--%>
