@@ -13,6 +13,7 @@
 <%@include file="../pages/jspf/header.jspf" %>
 <%@include file="../pages/jspf/letters.jspf" %>
         <div class="body">
+            <%@include file="../pages/jspf/addbooks.jspf" %>
         </div> <%--end body--%>
 
 <%@include file="../pages/jspf/login.jspf" %>

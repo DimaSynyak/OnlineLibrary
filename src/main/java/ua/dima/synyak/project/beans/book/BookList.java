@@ -1,7 +1,9 @@
 package ua.dima.synyak.project.beans.book;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ua.dima.synyak.project.db.DAO.Factory;
+import ua.dima.synyak.project.DAO.book.BookDAO;
+import ua.dima.synyak.project.DAO.genre.GenreDAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +13,10 @@ import java.util.List;
  */
 @Service
 public class BookList {
+
+    @Autowired
+    private BookDAO bookDAO;
+
     private List<Book> books = new ArrayList();
 
     public List<Book> getBooks(){
@@ -18,14 +24,15 @@ public class BookList {
     }
 
     public List<Book> getBooksByGenreId(String genre){
-        return Factory.getInstance().getBookDAO().getBooksByGenreId(Integer.parseInt(genre));
+        return bookDAO.getBooksByGenreId(Integer.parseInt(genre));
     }
 
     public Book getBook(int book_id){
-        return Factory.getInstance().getBookDAO().getBookById(book_id);
+        return bookDAO.getBookById(book_id);
     }
+    
 
     public List<Book> getBooksByLetter(String letter){
-        return Factory.getInstance().getBookDAO().getBooksByletter(letter);
+        return bookDAO.getBooksByletter(letter);
     }
 }

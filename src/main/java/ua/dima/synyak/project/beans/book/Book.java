@@ -5,6 +5,7 @@ import ua.dima.synyak.project.beans.genre.Genre;
 import ua.dima.synyak.project.beans.publisher.Publisher;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 /**
  * Created by root on 8/13/15.
@@ -14,6 +15,9 @@ import javax.persistence.*;
 public class Book {
     @Id
     private int id;
+
+    @Column(name = "content")
+    private byte[] content;
 
     @Column(name = "name")
     private String name;
@@ -25,37 +29,37 @@ public class Book {
     private String isbn;
 
     @Column(name = "publish_year")
-    private int publish_year;
+    private Date publish_year;
 
     @Column(name = "image")
     private byte[] image;
 
-    @Column(name = "genre_id", insertable = false, updatable = false)
+    @Column(name = "genre_id", insertable = true, updatable = true)
     private int genre_id;
 
-    @Column(name = "author_id", insertable = false, updatable = false)
+    @Column(name = "author_id", insertable = true, updatable = true)
     private int author_id;
 
-    @Column(name = "publisher_id", insertable = false, updatable = false)
+    @Column(name = "publisher_id", insertable = true, updatable = true)
     private int publisher_id;
 
-    @OneToOne(targetEntity = Genre.class, fetch = FetchType.EAGER)
-    @JoinColumn(name = "genre_id", referencedColumnName = "id")
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "genre_id", referencedColumnName = "id", insertable = false, updatable = false)
     private Genre genre;
 
-    @OneToOne(targetEntity = Author.class, fetch =FetchType.EAGER)
-    @JoinColumn(name = "author_id", referencedColumnName = "id")
+    @OneToOne(fetch =FetchType.EAGER)
+    @JoinColumn(name = "author_id", referencedColumnName = "id", insertable = false, updatable = false)
     private Author author;
 
-    @OneToOne(targetEntity = Publisher.class, fetch = FetchType.EAGER)
-    @JoinColumn(name = "publisher_id", referencedColumnName = "id")
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "publisher_id", referencedColumnName = "id", insertable = false, updatable = false)
     private Publisher publish;
 
-    public int getPublish_year() {
+    public Date getPublish_year() {
         return this.publish_year;
     }
 
-    public void setPublish_year(int publish_year) {
+    public void setPublish_year(Date publish_year) {
         this.publish_year = publish_year;
     }
 
@@ -153,5 +157,13 @@ public class Book {
 
     public void setPublish(Publisher publish) {
         this.publish = publish;
+    }
+
+    public byte[] getContent() {
+        return content;
+    }
+
+    public void setContent(byte[] content) {
+        this.content = content;
     }
 }

@@ -1,4 +1,4 @@
-package ua.dima.synyak.project.db.DAO.person;
+package ua.dima.synyak.project.DAO.person;
 
 import ua.dima.synyak.project.beans.person.Person;
 

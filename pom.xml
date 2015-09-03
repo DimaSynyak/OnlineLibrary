@@ -39,10 +39,10 @@
 
 		<!--<dependency>-->
 			<!--<groupId>org.springframework</groupId>-->
-			<!--<artifactId>spring-test</artifactId>-->
+			<!--<artifactId>spring-ua.dima.synyak.project.test</artifactId>-->
 			<!--<version>${spring.version}</version>-->
 			<!--<type>jar</type>-->
-			<!--<scope>test</scope>-->
+			<!--<scope>ua.dima.synyak.project.test</scope>-->
 		<!--</dependency>-->
 
 		<!--&lt;!&ndash; CGLib for @Configuration &ndash;&gt;-->
@@ -104,6 +104,11 @@
 
 	<dependencies>
 
+		<!--<dependency>-->
+			<!--<groupId>cglib</groupId>-->
+			<!--<artifactId>cglib</artifactId>-->
+			<!--<version>2.2.2</version>-->
+		<!--</dependency>-->
 		<!-- Spring webmvc web contex core aop-->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -128,6 +133,21 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
 			<version>4.1.7.RELEASE</version>
 		</dependency>
 
@@ -209,6 +229,17 @@
 			<version>3.3.2.GA</version>
 		</dependency>
 		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>3.3.2.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.12</version>
@@ -275,6 +306,9 @@
 					<path>/OnlineLibrary</path>
 				</configuration>
 			</plugin>
+
+
+
 		</plugins>
 	</build>
 </project>

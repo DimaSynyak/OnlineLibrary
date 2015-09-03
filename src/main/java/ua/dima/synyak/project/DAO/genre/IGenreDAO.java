@@ -1,4 +1,4 @@
-package ua.dima.synyak.project.db.DAO.genre;
+package ua.dima.synyak.project.DAO.genre;
 
 import ua.dima.synyak.project.beans.genre.Genre;
 import ua.dima.synyak.project.beans.person.Person;
@@ -10,4 +10,5 @@ import java.util.List;
  */
 public interface IGenreDAO {
     List<Genre> getGenres();
+    Genre getGenreByName(String genre);
 }

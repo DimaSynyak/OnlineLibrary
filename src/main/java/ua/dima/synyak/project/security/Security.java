@@ -22,6 +22,10 @@ public class Security extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDatail userDatail;
 
+    public Security() {
+        System.out.println(this);
+    }
+
     @Autowired
     private void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
             auth.userDetailsService(userDatail);
@@ -38,6 +42,10 @@ public class Security extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 .and();
+
+//        http.authorizeRequests()
+//                .and();
+
 
 
 //        http.authorizeRequests()

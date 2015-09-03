@@ -25,29 +25,7 @@
   </select>
 </div>
 
-  <sec:authorize access="hasRole('ADMIN')">
-    <div class="book_info">
-      <div class="book_title">
-        <p>Новая книга</p>
-      </div>
-
-      <div>
-        <img src="${pageContext.request.contextPath}/resources/images/image_title_book1.jpg" height="250" width="190"/>
-      </div>
-
-      <div class="book_details">
-        <br><strong>ISBN:</strong> ---------
-        <br><strong>Издательство:</strong> ---------
-        <br><strong>Кол-во страниц:</strong> ---------
-        <br><strong>Год издания:</strong> ---------
-        <br><strong>Автор:</strong> ---------
-
-        <form action="${pageContext.request.contextPath}/addbook" method="post">
-          <input type="submit" value="Добавить"/>
-        </form>
-      </div>
-    </div>
-  </sec:authorize>
+  <%@include file="../pages/jspf/addbooks.jspf" %>
 
   <c:forEach items="${books}" var="book">
     <div class="book_info">

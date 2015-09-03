@@ -1,9 +1,10 @@
 package ua.dima.synyak.project.beans.author;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.sql.Date;
 
 /**
  * Created by root on 8/13/15.
@@ -11,23 +12,28 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "author")
 public class Author {
+
     @Id
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
+    @Column(name = "id", insertable = true, updatable = true)
     private int id;
 
-    @Column(name = "fio")
+    @Column(name = "name")
     private String name;
 
-    private String birthday;
+    @Column(name = "birthday")
+    private Date birthday;
 
     public Author() {
 
     }
 
-    public String getBirthday(String birthday) {
+    public Date getBirthday() {
         return this.birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
